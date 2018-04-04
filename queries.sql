@@ -1,4 +1,4 @@
-
+/*
 -- Utgå ifån att datumet är 2018-04-04
 
 -- Uppgift 1
@@ -26,12 +26,24 @@ SELECT * FROM all_movies_that_are_lended_out_view;
 
 
 -- Uppgift 4
-CREATE OR REPLACE VIEW `all_movies_that_should_have_been_returned` AS
-SELECT * FROM movie;
+CREATE OR REPLACE VIEW `all_movies_that_should_have_been_returned_view` AS
+SELECT m.movieName, c.customerFirstName, c.customerLastName FROM movie_rented_details md
+LEFT JOIN customer c ON c.idCustomer = md.Customer_idCustomer
+LEFT JOIN movie m ON m.idMovie = md.movie_idMovie
+WHERE md.movieReturnedDate IS NULL;
+
+SELECT * FROM all_movies_that_should_have_been_returned_view;
 
 
 -- Uppgift 5
--- CREATE OR REPLACE VIEW `count_and_list_movies_rented_out_by_employee` AS
+CREATE OR REPLACE VIEW `count_and_list_movies_rented_out_by_employee_view` AS
+SELECT e.employeeFirstName AS First_Name, e.employeeLastName AS Last_Name, COUNT(*) AS Movies_Lended FROM employee e
+lEFT JOIN movie_rented_details md ON e.idEmployee = md.employee_idEmployee
+WHERE e.idEmployee = md.employee_idEmployee
+GROUP BY e.employeeFirstName ORDER BY Movies_Lended DESC;
+
+SELECT * FROM count_and_list_movies_rented_out_by_employee_view;
+*/
 
 
 /*
