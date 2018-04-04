@@ -46,7 +46,7 @@ SELECT * FROM count_and_list_movies_rented_out_by_employee_view;
 */
 CREATE OR REPLACE VIEW `most_borrowed_movies_last_month` AS
 SELECT * FROM movie;
-
+-- 
 /*
 
 DELETE FROM movie;
