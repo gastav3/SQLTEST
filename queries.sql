@@ -26,7 +26,8 @@ SELECT * FROM all_movies_that_are_lended_out_view;
 
 
 -- Uppgift 4
-CREATE OR REPLACE VIEW `all_movies_that_are_lended_out_view` AS
+CREATE OR REPLACE VIEW `all_movies_that_should_have_been_returned` AS
+SELECT * FROM movie;
 
 
 -- Uppgift 5
