@@ -1,0 +1,4 @@
+branch för varje fråga ifrån develop
+queries ska innehålla bara det som krävs för att köra frågorna
+database ska exporteras i där finns view och datan som har skapats
+model innehåller diagramet.
