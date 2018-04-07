@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `gustav_andersson_slutprojekt_` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `gustav_andersson_slutprojekt_`;
+CREATE DATABASE  IF NOT EXISTS `gustava` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `gustava`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: gustav_andersson_slutprojekt_
+-- Host: localhost    Database: gustava
 -- ------------------------------------------------------
 -- Server version	5.7.21-log
 
@@ -110,8 +110,8 @@ DROP TABLE IF EXISTS `customer`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `customer` (
   `idCustomer` int(11) NOT NULL AUTO_INCREMENT,
-  `customerFirstName` varchar(45) DEFAULT NULL,
-  `customerLastName` varchar(45) DEFAULT NULL,
+  `firstName` varchar(45) DEFAULT NULL,
+  `lastName` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idCustomer`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -135,8 +135,8 @@ DROP TABLE IF EXISTS `director`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `director` (
   `idDirector` int(11) NOT NULL AUTO_INCREMENT,
-  `directorFirstName` varchar(45) DEFAULT NULL,
-  `directorLastName` varchar(45) DEFAULT NULL,
+  `firstName` varchar(45) DEFAULT NULL,
+  `lastName` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idDirector`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -187,8 +187,8 @@ DROP TABLE IF EXISTS `employee`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `employee` (
   `idEmployee` int(11) NOT NULL AUTO_INCREMENT,
-  `employeeFirstName` varchar(45) DEFAULT NULL,
-  `employeeLastName` varchar(45) DEFAULT NULL,
+  `firstName` varchar(45) DEFAULT NULL,
+  `lastName` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idEmployee`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -266,11 +266,11 @@ INSERT INTO `movie_rented_details` VALUES (1,'2018-04-04','2018-04-06','2018-04-
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'gustav_andersson_slutprojekt_'
+-- Dumping events for database 'gustava'
 --
 
 --
--- Dumping routines for database 'gustav_andersson_slutprojekt_'
+-- Dumping routines for database 'gustava'
 --
 
 --
@@ -318,4 +318,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-07 16:36:40
+-- Dump completed on 2018-04-07 17:04:09
